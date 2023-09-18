@@ -6,7 +6,7 @@
         </div>
         <div class="">
             <div class="p-3">
-                <img class="img-fluid border border-3 border-warning elevation-5 rounded" :src="postProp?.imgUrl" alt="">
+                <img class="img-fluid border border-3 border-dark elevation-5 rounded" :src="postProp?.imgUrl" alt="">
                 <h5
                     class="flex-inline elevation-5 my-3 border border-3 border-warning rounded text-center d-flex text-dark fw-bold bg-light">
                     <span class="text-danger"> Likes: </span> {{
@@ -14,7 +14,7 @@
                 </h5>
                 <span v-if="user.isAuthenticated" @mouseover="showLikesTooltip = true"
                     @mouseleave="showLikesTooltip = false"> <button
-                        class="btn btn-warning border border-primary border-3 elevation-5" @click="likePost(postProp?.id)">
+                        class="btn btn-warning border border-warning border-3 elevation-5" @click="likePost(postProp?.id)">
                         👍🏾👍🏾👍🏾 </button>
                 </span>
 
@@ -25,7 +25,7 @@
                 </div>
 
             </div>
-            <div class=" border border-3 border-warning rounded bg-newPink elevation-5 m-2">
+            <div class=" border border-3 border-dark rounded bg-newPink elevation-5 m-2">
                 <div class=" d-flex flex-column text-center text-dark fw-bold">
                     <p> <span class="text-warning"> Title: </span> {{ postProp?.body }}</p>
 
@@ -35,7 +35,7 @@
                         <p> <span class="text-warning"> Creator: </span> {{ postProp?.creator.name }}</p>
                         <p> <span class="text-warning"> Posted: </span> {{ postProp?.createdAt }}</p>
                     </div>
-                    <img class="creator-picture border border-3 border-primary rounded-circle offset-4 elevation-5"
+                    <img class="creator-picture border border-3 border-warning rounded-circle offset-4 elevation-5"
                         :src="postProp?.creator.picture">
                 </router-link>
             </div>
@@ -116,7 +116,7 @@ export default {
 }
 
 .pCard {
-    background-color: #f36f9dd2;
+    background-color: #f36f9dd6;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -125,7 +125,7 @@ export default {
 }
 
 .bg-newPink {
-    background: #45a2ffb1 !important;
+    background: #5ca7f1bf !important;
 }
 
 .likes-tooltip {
